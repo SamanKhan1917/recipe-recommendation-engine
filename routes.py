@@ -6,14 +6,14 @@ import openai
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables
+load_dotenv()  
 
-# Fetch the OpenAI API key
+
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 router = APIRouter()
 
-# Dependency to get a DB session
+
 def get_db():
     db = SessionLocal()
     try:
